@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Talkie",
+    "version": "1.0.0",
+    "description": "Talk to your friends right in the browser, when your work is going on in the background.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "icon-16.png",
+            "48": "icon-48.png",
+            "128": "icon-128.png"
+        }
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ]
+}
