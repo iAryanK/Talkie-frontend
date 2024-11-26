@@ -1,2 +1,2 @@
-export const BACKEND_WS_URL = "ws://localhost:8080";
-export const BACKEND_HTTP_URL = "http://localhost:443";
+export const BACKEND_WS_URL = "https://talkie-backend-1.onrender.com:8080";
+export const BACKEND_HTTP_URL = "https://talkie-backend-1.onrender.com:443";
