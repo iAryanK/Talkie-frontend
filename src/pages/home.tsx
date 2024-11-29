@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { BACKEND_URL } from "../config";
 import Chat from "../components/Chat";
 
 export interface MessageType {
@@ -22,7 +21,7 @@ function Home() {
     }
 
     if (!socket.current) {
-      const ws = new WebSocket(`${BACKEND_URL}`);
+      const ws = new WebSocket(import.meta.env.VITE_BACKEND_API_URL);
       socket.current = ws;
     }
 
@@ -41,18 +40,15 @@ function Home() {
     return () => {
       socket.current?.close();
       socket.current = null;
-      console.log("Socket closed");
     };
   }, []);
 
   useEffect(() => {
     if (socket.current) {
       socket.current.onmessage = (message) => {
-        console.log(typeof message.data);
         const parsedMessage = JSON.parse(message.data);
         setMessages((m) => [...m, parsedMessage]);
       };
-      console.log("messages", messages);
     }
   }, [messages]);
 

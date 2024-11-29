@@ -28,7 +28,6 @@ const Chat = ({
     if (self_data) {
       const parsed_self_data = JSON.parse(self_data);
       selfname.current = parsed_self_data.username;
-      console.log("Self data", selfname.current);
     }
 
     inputRef.current?.focus();
@@ -48,7 +47,6 @@ const Chat = ({
 
       // Send the message to the server
       if (!socket.current) {
-        console.log("Socket not connected");
         return;
       }
 

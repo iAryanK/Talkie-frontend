@@ -5,7 +5,7 @@ import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="w-fit">
+    <div className="bg-black min-h-screen flex items-center justify-center">
       <App />
     </div>
   </StrictMode>
