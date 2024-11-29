@@ -5,6 +5,18 @@ const InstallPrompt = () => {
   const [showPrompt, setShowPrompt] = useState(false);
 
   useEffect(() => {
+    const handleAppInstalled = () => {
+      setShowPrompt(false);
+    };
+
+    window.addEventListener("appinstalled", handleAppInstalled);
+
+    return () => {
+      window.removeEventListener("appinstalled", handleAppInstalled);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleBeforeInstallPrompt = (event: any) => {
       event.preventDefault();
       setPrompt(event);
@@ -40,7 +52,7 @@ const InstallPrompt = () => {
         className="p-2 rounded bg-zinc-400 hover:bg-zinc-400/80 flex items-center gap-2"
         onClick={handleInstallApp}
       >
-        <span className="text-black pt-1">Install Talkie</span>
+        <span className="text-black">Install Talkie</span>
         <img src="./install.svg" alt="Install" className="w-4 h-4" />
       </button>
     </div>

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Button } from "../components/ui/Button";
 import Input from "../components/ui/Input";
+import InstallPrompt from "../components/InstallPrompt";
 
 const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
   const inputNameRef = useRef<HTMLInputElement>(null);
@@ -73,9 +74,12 @@ const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
           </div>
         </div>
 
-        <div className=" text-sm mx-5 text-center text-zinc-500 vt323-regular tracking-wider leading-4">
-          People in same frequency can talk to each other. Set a frequency in
-          the range of 100.0-900.0 MHz.
+        <div className=" text-sm mx-5 text-center text-zinc-500 vt323-regular tracking-wider leading-4 flex flex-col gap-2 justify-center items-center">
+          <InstallPrompt />
+          <p>
+            People in same frequency can talk to each other. Set a frequency in
+            the range of 100.0-900.0 MHz.
+          </p>
         </div>
       </div>
     </div>
