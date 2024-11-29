@@ -5,18 +5,6 @@ const InstallPrompt = () => {
   const [showPrompt, setShowPrompt] = useState(false);
 
   useEffect(() => {
-    const handleAppInstalled = () => {
-      setShowPrompt(false);
-    };
-
-    window.addEventListener("appinstalled", handleAppInstalled);
-
-    return () => {
-      window.removeEventListener("appinstalled", handleAppInstalled);
-    };
-  }, []);
-
-  useEffect(() => {
     const handleBeforeInstallPrompt = (event: any) => {
       event.preventDefault();
       setPrompt(event);
