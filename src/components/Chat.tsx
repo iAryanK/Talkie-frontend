@@ -6,6 +6,7 @@ import { formattedName } from "../utils";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { MessageType } from "../pages/home";
+import InstallPrompt from "./InstallPrompt";
 
 const Chat = ({
   font,
@@ -92,7 +93,8 @@ const Chat = ({
               className="h-[22rem] overflow-y-scroll px-2 scroll-mb-0 mx-3 flex flex-col gap-2 py-2 items-center justify-center text-zinc-500 text-sm text-center tracking-wide"
             >
               Your chat is not stored on the server. Once you leave the room,
-              all messages will be lost.
+              all messages will be lost. <br />
+              <InstallPrompt />
             </div>
           )}
           <div
