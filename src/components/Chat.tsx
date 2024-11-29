@@ -66,7 +66,7 @@ const Chat = ({
   };
 
   return (
-    <div className="max-sm:min-h-screen h-[30rem] max-sm:w-screen xs:max-w-xs sm:w-[22rem] w-[22rem]">
+    <div className="h-[30rem] w-[22rem]">
       <div className="h-full bg-zinc-900  flex flex-col justify-between relative">
         <div className="px-2 pt-2">
           <Topbar />
