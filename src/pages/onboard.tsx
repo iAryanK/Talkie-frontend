@@ -16,7 +16,11 @@ const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
       return;
     }
 
-    if (Number(frequency) < 100.0 || Number(frequency) >= 901) {
+    if (
+      Number(frequency) < 100.0 ||
+      Number(frequency) >= 901 ||
+      isNaN(Number(frequency))
+    ) {
       alert("Please set a frequency in the range of 100.0-900.0 MHz");
       return;
     }
@@ -53,7 +57,7 @@ const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
               className="rounded tracking-wider text-center"
             />
             <Input
-              type="tel"
+              type="number"
               reference={inputFreqRef}
               placeholder="Set your frequency"
               className="rounded tracking-wider text-center"
@@ -71,7 +75,7 @@ const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
 
         <div className=" text-sm mx-5 text-center text-zinc-500 vt323-regular tracking-wider leading-4">
           People in same frequency can talk to each other. Set a frequency in
-          the range if 100.0-900.0 MHz.
+          the range of 100.0-900.0 MHz.
         </div>
       </div>
     </div>

@@ -66,7 +66,7 @@ const Chat = ({
   };
 
   return (
-    <div className="max-sm:min-h-screen h-[30rem] max-sm:w-fit xs:max-w-xs sm:w-[22rem] w-[22rem]">
+    <div className="max-sm:min-h-screen h-[30rem] max-sm:w-screen xs:max-w-xs sm:w-[22rem] w-[22rem]">
       <div className="h-full bg-zinc-900  flex flex-col justify-between relative">
         <div className="px-2 pt-2">
           <Topbar />
@@ -97,7 +97,7 @@ const Chat = ({
           )}
           <div
             ref={divRef}
-            className="h-fit max-h-[23rem] overflow-y-scroll px-2 scroll-mb-0 mx-3 flex flex-col gap-2 py-2"
+            className="h-fit max-h-[23rem] overflow-y-scroll px-2 scroll-mb-0 mx-3 flex flex-col gap-2 py-2 "
           >
             {messages.map((eachMessage, index) => (
               <div key={index} className={` text-white`}>
