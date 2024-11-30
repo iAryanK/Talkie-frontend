@@ -19,7 +19,7 @@ const Input = ({
       type={type}
       placeholder={placeholder}
       onKeyUp={onKeyPress}
-      className={`p-2 bg-zinc-800 h-full w-full outline-none rounded ${className}`}
+      className={`p-2 bg-zinc-800 w-full outline-none rounded ${className}`}
     />
   );
 };

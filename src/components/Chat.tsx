@@ -132,6 +132,7 @@ const Chat = ({
               onKeyPress={(event: { key: string }) => {
                 if (event.key === "Enter") handleSendMessage();
               }}
+              className="h-full"
             />
             <Button
               variant="primary"
