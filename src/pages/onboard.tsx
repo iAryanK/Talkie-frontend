@@ -40,13 +40,13 @@ const Onboard = ({ setSelf }: { setSelf: (self: string) => void }) => {
   };
   return (
     <div className="max-sm:min-h-screen h-[30rem] w-fit xs:max-w-xs sm:w-[22rem] special-elite-regular">
-      <div className="h-full bg-zinc-900 rounded flex flex-col justify-between gap-2 py-5">
+      <div className="h-full bg-zinc-900 rounded flex flex-col justify-between gap-2 py-10">
         <div className="relative mx-auto">
           <div className="absolute border-2 w-2 h-2 animate-ping rounded-full  left-[17px]"></div>
           <img src="./logo.svg" alt="Talkie" className="w-16 h-16  mx-auto" />
         </div>
         <div className="">
-          <h1 className="tracking-wider text-center mb-5">
+          <h1 className="tracking-wider text-center mb-5 text-xl">
             Set up your <strong className="tracking-widest">Talkie</strong>{" "}
             account
           </h1>
