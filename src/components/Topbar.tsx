@@ -1,15 +1,22 @@
+import { useRef } from "react";
+
 const Topbar = () => {
-  const handleLogout = () => {
-    localStorage.removeItem("self");
-    window.location.reload();
-  };
+  const frequency = useRef();
 
   const myFrequency = () => {
     const self_data = localStorage.getItem("self");
     if (self_data) {
       const parsed_self_data = JSON.parse(self_data);
+      frequency.current = parsed_self_data.frequency;
+
       return parsed_self_data.frequency;
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("self");
+    window.location.reload();
+    if (frequency.current) localStorage.removeItem(frequency.current);
   };
 
   return (
